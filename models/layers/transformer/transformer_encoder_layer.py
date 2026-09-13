@@ -1,12 +1,4 @@
-# Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
-# Published at NeurIPS 2022
-# Modified by Shaoshuai Shi 
-# All Rights Reserved
 
-
-"""
-Reference: https://github.com/dvlab-research/DeepVision3D/blob/master/EQNet/eqnet/transformer/multi_head_attention.py
-"""
 
 from typing import Optional, List
 
