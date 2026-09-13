@@ -33,11 +33,6 @@ processed_scenarios_validation_interactive_infos.pkl
 python train.py
 ```
 
-The released protocol keeps the converged Base predictor fixed and optimizes
-the candidate-aware residual refinement stage. `train.py` installs the minimal
-JFER extension into the configured MTR checkout and starts distributed
-training. The included checkpoint is used as the default initialization; a
-different compatible initialization can be supplied with `--checkpoint`.
 
 ## Evaluation
 
