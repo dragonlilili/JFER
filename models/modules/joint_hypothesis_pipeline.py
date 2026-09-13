@@ -5,7 +5,7 @@ import torch.distributed as dist
 import torch.nn as nn
 import torch.nn.functional as F
 
-from mtr.utils import common_utils
+from utils import common as common_utils
 from .joint_reasoning import (
     IntegratedJointWorldDecoder,
     _build_mlp,
@@ -14136,7 +14136,7 @@ class CandidateBankJointWorldDecoder(IntegratedJointWorldDecoder):
         """Return decoder outputs before post-decoder candidate expansion.
 
         Protected expansion changes the final candidate axis from six base
-        generation modes to a larger deployment pool.  The MTR prediction
+        generation modes to a larger deployment pool. The base prediction
         loss and structured-world loss must supervise the same six modes that
         produced ``loss_agent_pred_trajs`` and ``loss_agent_pred_scores``.
         """
@@ -14427,7 +14427,7 @@ class CandidateBankJointWorldDecoder(IntegratedJointWorldDecoder):
                 base_loss = reference.new_zeros(())
                 tb = {}
             # The unified posterior ranks exactly the frozen six-candidate
-            # deployment support. MTR trajectory regression remains aligned to
+            # deployment support. Base trajectory regression remains aligned to
             # the six decoder modes that produced the base loss above.
             if "world_credit_posterior" in outputs[-1]:
                 final_generation = dict(outputs[-1])

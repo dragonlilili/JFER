@@ -310,7 +310,7 @@ def train_model(model, optimizer, train_loader, optim_cfg,
                 )
             )
             if should_eval:
-                from eval_utils.eval_utils import eval_one_epoch
+                from evaluation.evaluation_utils import eval_one_epoch
 
                 pure_model = model
                 torch.cuda.empty_cache()
@@ -449,11 +449,7 @@ def checkpoint_state(model=None, optimizer=None, epoch=None, it=None):
     else:
         model_state = None
 
-    try:
-        import mtr
-        version = 'mtr+' + mtr.__version__
-    except:
-        version = 'none'
+    version = 'jfer'
 
     return {'epoch': epoch, 'it': it, 'model_state': model_state, 'optimizer_state': optim_state, 'version': version}
 

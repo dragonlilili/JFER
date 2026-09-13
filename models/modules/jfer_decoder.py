@@ -1,16 +1,16 @@
-"""JFER integration for the upstream MTR motion decoder."""
+"""JFER motion decoder."""
 
 import torch
 
 from .joint_hypothesis_pipeline import CandidateBankJointWorldDecoder
-from .mtr_decoder import MTRDecoder
+from models.decoder.base_decoder import BaseMotionDecoder
 
 
-class JFERMTRDecoder(MTRDecoder):
-    """Add the released JFER candidate-bank path to upstream MTR.
+class JFERDecoder(BaseMotionDecoder):
+    """Add structured joint exploration to the base motion decoder.
 
     Base scene encoding, object/map attention, dense prediction, and motion
-    heads remain implemented by :class:`MTRDecoder`. This subclass only owns
+    heads remain implemented by :class:`BaseMotionDecoder`. This subclass owns
     the joint candidate initialization, per-layer joint coupling, residual
     refinement, guarded final selection, and their training loss.
     """

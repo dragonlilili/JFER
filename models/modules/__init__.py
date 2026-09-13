@@ -1,1 +1,1 @@
-"""Implementation modules installed into the MTR motion-decoder package."""
+"""Core JFER reasoning and refinement modules."""

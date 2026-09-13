@@ -1,6 +1,6 @@
 """Proposal-anchored world-conditioned residual flow.
 
-The module keeps the trusted MTR candidate set as an explicit geometric prior.
+The module keeps the decoded candidate set as an explicit geometric prior.
 It learns a bounded correction field and candidate success energy jointly, so
 world reasoning can improve trajectories without replacing the proposal model.
 """

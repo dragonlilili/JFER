@@ -1,0 +1,52 @@
+# Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
+# Published at NeurIPS 2022
+
+
+import os
+from setuptools import find_packages, setup
+from torch.utils.cpp_extension import BuildExtension, CUDAExtension
+
+
+def make_cuda_ext(name, module, sources):
+    cuda_ext = CUDAExtension(
+        name='%s.%s' % (module, name),
+        sources=[os.path.join(*module.split('.'), src) for src in sources]
+    )
+    return cuda_ext
+
+
+if __name__ == '__main__':
+    setup(
+        name='jfer',
+        version='1.0.0',
+        description='Joint Future Exploration and Reasoning',
+        license='Apache License 2.0',
+        packages=find_packages(),
+        cmdclass={
+            'build_ext': BuildExtension,
+        },
+        ext_modules=[
+            make_cuda_ext(
+                name='knn_cuda',
+                module='ops.knn',
+                sources=[
+                    'src/knn.cpp',
+                    'src/knn_gpu.cu',
+                    'src/knn_api.cpp',
+                ],
+            ),
+            make_cuda_ext(
+                name='attention_cuda',
+                module='ops.attention',
+                sources=[
+                    'src/attention_api.cpp',
+                    'src/attention_func_v2.cpp',
+                    'src/attention_func.cpp',
+                    'src/attention_value_computation_kernel_v2.cu',
+                    'src/attention_value_computation_kernel.cu',
+                    'src/attention_weight_computation_kernel_v2.cu',
+                    'src/attention_weight_computation_kernel.cu',
+                ],
+            ),
+        ],
+    )

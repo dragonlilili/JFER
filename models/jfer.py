@@ -6,10 +6,10 @@ from typing import Any
 
 
 def build_jfer_decoder(in_channels: int, config: Any) -> Any:
-    """Build JFER after the extension has been installed into MTR."""
-    from mtr.models.motion_decoder.jfer_decoder import JFERMTRDecoder
+    """Build the JFER motion decoder."""
+    from .modules.jfer_decoder import JFERDecoder
 
-    return JFERMTRDecoder(in_channels=in_channels, config=config)
+    return JFERDecoder(in_channels=in_channels, config=config)
 
 
 __all__ = ["build_jfer_decoder"]

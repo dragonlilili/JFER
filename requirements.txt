@@ -1,0 +1,9 @@
+easydict==1.13
+numpy==1.23.5
+PyYAML==6.0.3
+scikit-image==0.20.0
+tensorboardX==2.6.2.2
+tensorflow==2.13.0
+torch>=2.7
+tqdm==4.67.3
+waymo-open-dataset-tf-2-12-0==1.6.7

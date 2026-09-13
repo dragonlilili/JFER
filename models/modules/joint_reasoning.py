@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from mtr.utils import common_utils, loss_utils
+from utils import common as common_utils, loss as loss_utils
 from .horizon_scoring import (
     WorldHorizonReliabilityHead,
     build_soft_map_credit_targets,
@@ -24,9 +24,9 @@ def _build_mlp(in_dim, hidden_dim, out_dim, dropout=0.0):
 
 
 class IntegratedJointWorldDecoder(nn.Module):
-    """Pair-conditioned world reasoning inside every MTR decoder layer.
+    """Pair-conditioned world reasoning inside every base decoder layer.
 
-    MTR still performs its strong object/map cross-attention. This module binds
+    The base decoder retains object/map cross-attention. This module binds
     the two target queries into one joint hypothesis before the first layer,
     couples all joint modes after every scene-attention update, and rolls each
     joint trajectory through a scene-conditioned latent world before the next

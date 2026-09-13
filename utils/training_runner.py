@@ -1,7 +1,6 @@
 # Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
 """Focused training entry point for the released JFER model."""
 
-import _init_path
 import argparse
 import datetime
 import glob
@@ -14,16 +13,16 @@ import torch.nn as nn
 import torch.optim.lr_scheduler as lr_sched
 from tensorboardX import SummaryWriter
 
-from mtr.config import (
+from config import (
     cfg,
     cfg_from_list,
     cfg_from_yaml_file,
     log_config_to_file,
 )
-from mtr.datasets import build_dataloader
-from mtr.models import model as model_utils
-from mtr.utils import common_utils
-from train_utils.train_utils import train_model
+from data import build_dataloader
+from models import model as model_utils
+from utils import common as common_utils
+from utils.training_utils import train_model
 
 
 def parse_config():
@@ -60,7 +59,7 @@ def parse_config():
 
     cfg_from_yaml_file(args.cfg_file, cfg)
     cfg.TAG = Path(args.cfg_file).stem
-    cfg.EXP_GROUP_PATH = "/".join(args.cfg_file.split("/")[1:-1])
+    cfg.EXP_GROUP_PATH = "jfer"
     if args.set_cfgs is not None:
         cfg_from_list(args.set_cfgs, cfg)
     return args, cfg
