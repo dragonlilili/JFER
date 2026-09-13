@@ -1,10 +1,3 @@
-# Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
-# Published at NeurIPS 2022
-
-
-"""
-Modified from https://github.com/IDEA-opensource/DAB-DETR/blob/main/models/DAB_DETR/transformer.py
-"""
 
 from typing import Optional, List
 
