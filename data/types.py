@@ -1,6 +1,4 @@
-# Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
-# Published at NeurIPS 2022
-
+# Motion Transformer (MTR)
 
 object_type = {
     0: 'TYPE_UNSET',
