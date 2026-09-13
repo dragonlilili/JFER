@@ -3,31 +3,6 @@
 
 Anonymous implementation for the submitted paper.
 
-JFER produces six scene-consistent joint futures through four components:
-
-1. Structured Joint-Hypothesis Construction
-2. Complementary Joint-Future Expansion
-3. Candidate-Aware Refinement
-4. Reliability-Constrained Consolidation
-
-The repository contains the JFER extension and uses MTR as an external scene
-encoder and motion-decoding backbone. The MTR source tree and WOMD data are not
-included.
-
-The implementation is organized by method responsibility:
-
-```text
-models/modules/
-├── joint_hypothesis_pipeline.py
-├── joint_reasoning.py
-├── candidate_refinement.py
-├── spatial_context.py
-├── horizon_scoring.py
-└── jfer_decoder.py
-```
-
-Backbone integration, WOMD data handling, evaluation, and training utilities
-are kept in `models/backbone`, `data`, `evaluation`, and `utils`, respectively.
 
 ## Environment
 
