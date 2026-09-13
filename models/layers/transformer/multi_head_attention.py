@@ -1,4 +1,12 @@
+"""Global multi-head attention layers."""
 
+
+
+"""
+Mostly copy-paste from 
+    https://github.com/pytorch/pytorch/blob/master/torch/nn/modules/activation.py
+    
+"""
 
 import warnings
 import math 

@@ -1,3 +1,5 @@
+"""Position encoding utilities."""
+
 
 
 import torch 

@@ -1,3 +1,5 @@
+"""Base trajectory decoder used by JFER."""
+
 
 
 import copy

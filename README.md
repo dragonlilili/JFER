@@ -31,3 +31,6 @@ can be selected with `--stage`.
 ```bash
 python eval.py --checkpoint /path/to/checkpoint.pth
 ```
+
+The method implementation is organized under `models/jfer/`; the scene
+encoder, base decoder, and CUDA operators are included in this repository.

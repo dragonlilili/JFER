@@ -46,7 +46,7 @@ DATA_CONFIG:
     train: processed_scenarios_training
     test: processed_scenarios_validation_interactive
   INFO_FILE:
-    train: processed_scenarios_training_official_ooi_infos.pkl
+    train: processed_scenarios_training_infos.pkl
     test: processed_scenarios_validation_interactive_infos.pkl
   SAMPLE_INTERVAL:
     train: 5
@@ -225,7 +225,7 @@ MODEL:
       LOSS_WEIGHT_POSITIVE_WORLD_ALIGNMENT: 0.03
       LOSS_WEIGHT_INTENT_BALANCE: 0.0
       LOSS_WEIGHT_INTENT_ENTROPY: 0.0
-      TYPE: candidate_bank_joint_set
+      TYPE: jfer
       REQUIRE_OFFICIAL_OOI: true
       NUM_QUERY_MODES: 6
       DISTINCT_INTENT_ASSIGNMENT: true
@@ -377,14 +377,6 @@ MODEL:
       EXPANSION_CROSS_RANK_TEMPERATURE: 0.5
       LOSS_WEIGHT_EXPANSION_CROSS_RANK: 1.0
       EXPANSION_DEPLOYMENT_ALIGNED_CONFIDENCE: true
-      STRUCTURED_BEHAVIOR_WORLD:
-        ENABLED: false
-      DEPLOYED_SET_SCORER:
-        ENABLED: false
-      DEPLOYED_TRAJECTORY_REFINER:
-        ENABLED: false
-      SET_TO_SLOT_TRANSPORT:
-        ENABLED: false
       CANDIDATE_RESIDUAL_FLOW:
         ENABLED: true
         MODEL_DIM: 128

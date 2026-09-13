@@ -1,3 +1,5 @@
+"""Configuration loading and command-line override utilities."""
+
 
 
 from pathlib import Path

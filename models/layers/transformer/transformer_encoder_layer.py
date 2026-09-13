@@ -1,4 +1,10 @@
+"""Transformer encoder layer."""
 
+
+
+"""
+Reference: https://github.com/dvlab-research/DeepVision3D/blob/master/EQNet/eqnet/transformer/multi_head_attention.py
+"""
 
 from typing import Optional, List
 

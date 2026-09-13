@@ -1,4 +1,4 @@
-
+"""Official WOMD interaction metric integration."""
 
 import os
 

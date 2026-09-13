@@ -1,4 +1,4 @@
-# Motion Transformer (MTR)
+"""Dataset and dataloader construction."""
 
 import numpy as np
 import torch
@@ -12,7 +12,7 @@ from .dataset import (
 )
 
 
-__all__ = {
+_DATASETS = {
     'WaymoDataset': WaymoDataset,
     'WaymoInteractiveDataset': WaymoInteractiveDataset,
     'WaymoInteractivePairCenterDataset': WaymoInteractivePairCenterDataset,
@@ -27,7 +27,7 @@ def build_dataloader(dataset_cfg, batch_size, dist, workers=4,
         np_seed = torch_seed // 2 ** 32 - 1
         np.random.seed(np_seed)
 
-    dataset = __all__[dataset_cfg.DATASET](
+    dataset = _DATASETS[dataset_cfg.DATASET](
         dataset_cfg=dataset_cfg,
         training=training,
         logger=logger, 

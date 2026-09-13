@@ -1,8 +1,4 @@
-// Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
-// Published at NeurIPS 2022
-// Written by Li Jiang, Shaoshuai Shi 
-// All Rights Reserved
-
+// CUDA implementation of batched k-nearest-neighbor lookup.
 
 #include "knn_gpu.h"
 

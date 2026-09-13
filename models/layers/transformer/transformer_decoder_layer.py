@@ -1,4 +1,10 @@
+"""Transformer decoder layer."""
 
+
+
+"""
+Modified from https://github.com/IDEA-opensource/DAB-DETR/blob/main/models/DAB_DETR/transformer.py
+"""
 
 from typing import Optional, List
 

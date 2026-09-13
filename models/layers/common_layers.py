@@ -1,3 +1,6 @@
+"""Shared neural-network layers."""
+
+
 
 import torch
 import torch.nn as nn

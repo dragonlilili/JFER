@@ -1,15 +1,10 @@
-/*
-Transformer function helper function.
-Written by tomztyang,
-2021/08/23
-*/
+// CUDA kernel for indexed local-attention weight computation.
 
 #include <math.h>
 #include <stdio.h>
 
 #define THREADS_PER_BLOCK 256
 #define DIVUP(m,n) ((m) / (n) + ((m) % (n) > 0))
-// #define DEBUG
 
 
 template <unsigned int d>

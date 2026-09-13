@@ -1,3 +1,6 @@
+"""Polyline-based scene context encoder."""
+
+
 
 import numpy as np
 import torch

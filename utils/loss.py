@@ -1,7 +1,5 @@
-# Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
-# Published at NeurIPS 2022
-# Written by Shaoshuai Shi 
-# All Rights Reserved
+"""Trajectory regression and classification losses."""
+
 
 
 import torch 
@@ -10,8 +8,7 @@ import torch
 def nll_loss_gmm_direct(pred_scores, pred_trajs, gt_trajs, gt_valid_mask, pre_nearest_mode_idxs=None,
                         timestamp_loss_weight=None, use_square_gmm=False, log_std_range=(-1.609, 5.0), rho_limit=0.5):
     """
-    GMM Loss for Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
-    Written by Shaoshuai Shi 
+    Gaussian-mixture trajectory regression loss.
 
     Args:
         pred_scores (batch_size, num_modes):

@@ -1,4 +1,4 @@
-# Motion Transformer (MTR)
+"""Typed containers used by the data pipeline."""
 
 object_type = {
     0: 'TYPE_UNSET',

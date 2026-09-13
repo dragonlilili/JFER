@@ -1,3 +1,4 @@
+"""Prediction formatting and evaluation helpers."""
 
 import pickle
 import time

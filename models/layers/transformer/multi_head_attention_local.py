@@ -1,3 +1,10 @@
+"""Local multi-head attention layers."""
+
+
+
+"""
+Mostly copy-paste from https://github.com/dvlab-research/DeepVision3D/blob/master/EQNet/eqnet/transformer/multi_head_attention.py
+"""
 
 import warnings
 import torch

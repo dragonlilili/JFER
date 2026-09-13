@@ -1,4 +1,5 @@
-# Motion Transformer
+"""Dataset registry for JFER training and evaluation."""
+
 import pickle
 from collections import Counter
 from pathlib import Path

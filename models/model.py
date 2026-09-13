@@ -1,3 +1,4 @@
+"""Top-level JFER model and checkpoint loading utilities."""
 
 import os
 
@@ -5,7 +6,7 @@ import torch
 import torch.nn as nn
 
 from .encoder import build_context_encoder
-from .modules.jfer_decoder import JFERDecoder
+from .decoder.jfer_decoder import JFERDecoder
 
 
 class JFER(nn.Module):

@@ -1,3 +1,6 @@
+"""Polyline feature encoder."""
+
+
 
 import torch
 import torch.nn as nn

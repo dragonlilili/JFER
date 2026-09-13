@@ -1,4 +1,3 @@
-# Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
 """Focused training entry point for the released JFER model."""
 
 import argparse

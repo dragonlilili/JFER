@@ -1,4 +1,6 @@
-# Motion Transformer (MTR)
+"""WOMD interaction-prediction dataset implementation."""
+
+
 
 import os
 import numpy as np
@@ -565,26 +567,9 @@ class WaymoDataset(DatasetTemplate):
                 metric_result_str += '%s: %.4f \n' % (key, metric_results[key])
             metric_result_str += '\n'
             metric_result_str += result_format_str
-        elif eval_method == 'av2':
-            from .av2_eval import av2_evaluation
-            metric_results, metric_result_str = av2_evaluation(pred_dicts)
         else:
-            raise NotImplementedError
+            raise NotImplementedError(
+                f"Unsupported evaluation method: {eval_method}"
+            )
 
         return metric_result_str, metric_results
-
-
-if __name__ == '__main__':
-    import argparse
-
-    parser = argparse.ArgumentParser(description='arg parser')
-    parser.add_argument('--cfg_file', type=str, default=None, help='specify the config of dataset')
-    args = parser.parse_args()
-
-    import yaml
-    from easydict import EasyDict
-    try:
-        yaml_config = yaml.safe_load(open(args.cfg_file), Loader=yaml.FullLoader)
-    except:
-        yaml_config = yaml.safe_load(open(args.cfg_file))
-    dataset_cfg = EasyDict(yaml_config)

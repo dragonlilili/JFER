@@ -1,8 +1,4 @@
-/*
-Transformer function helper function.
-Written by tomztyang,
-2021/08/23
-*/
+// CUDA kernel for local-attention weight computation.
 
 #include <math.h>
 #include <stdio.h>
@@ -11,7 +7,6 @@ Written by tomztyang,
 
 #define THREADS_PER_BLOCK 256
 #define DIVUP(m,n) ((m) / (n) + ((m) % (n) > 0))
-// #define DEBUG
 
 
 __global__ void attention_weight_computation_forward(

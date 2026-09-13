@@ -1,7 +1,4 @@
-// Motion Transformer (MTR):  Motion Forecasting Transformer with Global Intention Localization and Local Movement Refinement 
-// Written by Shaoshuai Shi 
-// All Rights Reserved
-
+// Python bindings for the batched k-nearest-neighbor operator.
 
 #include <torch/serialize/tensor.h>
 #include <torch/extension.h>

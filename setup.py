@@ -1,3 +1,4 @@
+"""Build configuration for JFER CUDA operators."""
 
 import os
 from setuptools import find_packages, setup
