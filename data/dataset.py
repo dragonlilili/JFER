@@ -1,5 +1,4 @@
-# Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
-
+# Motion Transformer
 import pickle
 from collections import Counter
 from pathlib import Path
