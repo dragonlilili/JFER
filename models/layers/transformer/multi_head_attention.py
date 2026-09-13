@@ -1,14 +1,4 @@
-# Motion Transformer (MTR): https://arxiv.org/abs/2209.13508
-# Published at NeurIPS 2022
-# Modified by Shaoshuai Shi 
-# All Rights Reserved
 
-
-"""
-Mostly copy-paste from 
-    https://github.com/pytorch/pytorch/blob/master/torch/nn/modules/activation.py
-    
-"""
 
 import warnings
 import math 
