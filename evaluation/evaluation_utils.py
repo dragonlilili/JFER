@@ -1,4 +1,4 @@
-# Motion Transformer (MTR)
+
 import pickle
 import time
 
