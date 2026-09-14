@@ -13,27 +13,27 @@ RELEASE:
     TRAIN_STAGE: candidate_bank_warmup
     EPOCHS: 3
     LEARNING_RATE: 0.0001
-    TRAIN_SAMPLE_INTERVAL: 5
+    TRAIN_SAMPLE_INTERVAL: 1
   - NAME: metric_scoring
     TRAIN_STAGE: candidate_bank_ap_calibration
     EPOCHS: 6
     LEARNING_RATE: 0.0001
-    TRAIN_SAMPLE_INTERVAL: 5
+    TRAIN_SAMPLE_INTERVAL: 1
   - NAME: complementary_expansion
     TRAIN_STAGE: candidate_bank_expansion
     EPOCHS: 6
     LEARNING_RATE: 0.0001
-    TRAIN_SAMPLE_INTERVAL: 5
+    TRAIN_SAMPLE_INTERVAL: 1
   - NAME: expansion_calibration
     TRAIN_STAGE: candidate_bank_expansion_calibration
     EPOCHS: 3
     LEARNING_RATE: 0.0001
-    TRAIN_SAMPLE_INTERVAL: 5
+    TRAIN_SAMPLE_INTERVAL: 1
   - NAME: residual_refinement
     TRAIN_STAGE: candidate_bank_residual_flow_geometry
     EPOCHS: 6
     LEARNING_RATE: 0.0001
-    TRAIN_SAMPLE_INTERVAL: 5
+    TRAIN_SAMPLE_INTERVAL: 1
 
 DATA_CONFIG:
   DATASET: WaymoInteractivePairCenterDataset
@@ -49,7 +49,7 @@ DATA_CONFIG:
     train: processed_scenarios_training_infos.pkl
     test: processed_scenarios_validation_interactive_infos.pkl
   SAMPLE_INTERVAL:
-    train: 5
+    train: 1
     test: 1
   INFO_FILTER_DICT:
     filter_info_by_interactive_pair:
